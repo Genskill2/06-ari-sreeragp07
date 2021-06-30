@@ -5,13 +5,13 @@
 #include<math.h>
 
 int count_characters(string s){
-  int char_count=0;
+  int noc=0;
   for(int i=0;i<=strlen(s);i++){
     if(isalnum(s[i])>0){
-      char_count+=1;
+      noc+=1;
     }
   }
-  return char_count;
+  return noc;
 }
 
 int count_words(string s){
@@ -36,15 +36,15 @@ int count_sent(string s){
 
 
 string ari(string s){
-  float char_count,word_count,sent_count,r1,r1;
+  float char_count,word_count,sent_count,r1,r2;
   double r;
   char_count = count_characters(s);
   word_count = count_words(s);
   sent_count = count_sent(s);
   r1 = (4.71*(char_count)/(word_count));
   r2 = (0.5*(word_count)/(sent_count));
-  r=fp+sp-21.43;
-  switch(((int)ar/1)+1){
+  r=r1+r2-21.43;
+  switch(((int)r/1)+1){
   case 1:
     return "Kindergarten";
   case 2:
