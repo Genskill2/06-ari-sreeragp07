@@ -11,7 +11,7 @@ int count_characters(string s){
       char_count+=1;
     }
   }
-  return noc;
+  return char_count;
 }
 
 int count_words(string s){
